@@ -1,0 +1,29 @@
+<% include partiels/header %>
+
+<table class="table">
+	<thead class="thead-dark">
+    	<tr>
+     	 <th scope="col">Product ID</th>
+     	 <th scope="col">Name</th>
+     	 <th scope="col">Material</th>
+     	 <th scope="col">Price</th>
+		 <th scope="col">EDIT</th>
+		 <th scope="col">DELETE</th>
+    	</tr>
+ 	</thead>
+	<tbody>
+		<% products.forEach(function(products){ %>
+			<tr>
+				<th scope="row"><%= products.productID %></th>
+				<td><%= products.name %></td>
+				<td><%= products.material %></td>
+				<td><%= products.price %></td>
+				<td><a type="button" class="btn btn-lg btn-primary btn-block" href="/products/viewProducts/<%= products._id %>/edit">EDIT</a></td>
+				<td><a type="button" class="btn btn-lg btn-danger btn-block" href="/products/viewProducts/<%= products._id %>/delete">DELETE</a></td>
+			</tr>
+		<% }) %>
+    </tbody>
+</table>
+
+
+<% include partiels/footer %>

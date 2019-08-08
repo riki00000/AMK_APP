@@ -1,0 +1,7 @@
+<% include partiels/header %>
+
+	  <form id="delete" action="/products/viewProducts/<%= product._id %>/delete?_method=DELETE" method="POST">
+			<button type="button" class="btn btn-lg btn-danger btn-block">DELETE</button>
+	  </form>
+
+<% include partiels/footer %>
